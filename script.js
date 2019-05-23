@@ -15,11 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let salary = form['salary'].value;
         let months = form['months'].value;
         let percent = form['percent'].value;
-        try {
-            annual = (salary * months) * (percent/100);
-        } catch (e) {
-            debugger
-        }
+        annual = (salary * months) * (percent / 100);
         if (isNaN(annual)) {
             M.toast({html: 'Введите числа'});
         } else {

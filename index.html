@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="nav-wrapper">
+                    <span class="brand-logo">Узнай какая премия тебя ждет</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="images/techno.jpg">
+        </div>
+    </div>
+    <div class="section white">
+        <div class="row container" style="margin-top: 20px">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s4">
+                        <input id="salary" type="text" class="validate">
+                        <label for="salary">Зарплата</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <input id="months" type="text" class="validate">
+                        <label for="months">Количество отработанных месяцев</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <input id="percent" type="text" class="validate">
+                        <label for="percent">Процент</label>
+                    </div>
+                </div>
+            </form>
+            <div class="row">
+                <div class="col s12">
+                    <a class="waves-effect waves-light btn" id="submit-button">Узнать</a>
+                </div>
+            </div>
+            <div class="row" style="display: none" id="card">
+                <div class="col s12 m6">
+                    <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                            <span class="card-title" id="card-title"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax"><img src="images/univercity.jpg"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

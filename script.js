@@ -12,12 +12,12 @@ document.addEventListener('DOMContentLoaded', function() {
     let instances = M.Parallax.init(elems, {});
 
     submitButton.addEventListener('click', () => {
-        let salary = form['salary'].value;
-        let months = form['months'].value;
-        let percent = form['percent'].value;
+        let salary = (form['salary'].value).trim();
+        let months = (form['months'].value).trim();
+        let percent = (form['percent'].value).trim();
         annual = (salary * months) * (percent / 100);
         if (isNaN(annual)) {
-            M.toast({html: 'Введите числа'});
+            M.toast({html: 'Введите только числа'});
         } else {
             card.style.display = 'block';
             cardTitle.innerText = annual + ' рублей';

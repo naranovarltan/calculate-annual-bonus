@@ -8,20 +8,19 @@ document.addEventListener('DOMContentLoaded', function() {
     let card = document.querySelector('#card');
     let cardTitle = document.querySelector('#card-title');
     let annual;
-
+    
     let instances = M.Parallax.init(elems, {});
 
     submitButton.addEventListener('click', () => {
         let salary = (form['salary'].value).trim();
         let months = (form['months'].value).trim();
         let percent = (form['percent'].value).trim();
-        annual = (salary * months) * (percent / 100);
+        annual = ((salary * months) * (percent / 100)) * 2;
         if (isNaN(annual)) {
             M.toast({html: 'Введите только числа'});
         } else {
             card.style.display = 'block';
             cardTitle.innerText = annual + ' рублей';
         }
-
     })
 });
